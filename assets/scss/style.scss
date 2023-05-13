@@ -10,63 +10,111 @@ html {
         font-family: 'Poppins', sans-serif !important;
         background-color: #feb228 !important;
 
-        .like {
-            display: flex;
-            flex-direction: row;
-            border: 2px solid #ffd758;
-            padding: 5px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            z-index: 2;
-            background-color: #feb228 !important;
-            color: #ffd758;
+        .like-area {
+            height: 65px;
 
-            .heart {
-                margin-right: 12px;
-                font-size: 32px;
-            }
-
-            .title {
-                font-size: 28px;
-                margin-top: 3px;
-                font-weight: 400;
-            }
-        }
-
-        .popup-group {
-            margin-left: -90px;
-            // margin-top: -140px;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            transition: margin-top .1s;
-
-            .popup {
+            .like {
                 display: flex;
                 flex-direction: row;
-                background-color: #ff6408;
-                padding: 6px 13px;
-                border-radius: 5px;
+                border: 2px solid #ffd758;
+                padding: 5px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                z-index: 2;
+                background-color: #feb228 !important;
+                color: #ffd758;
 
                 .heart {
-                    margin-right: 5px;
-                    color: #fffabe;
+                    margin-right: 12px;
+                    font-size: 32px;
                 }
 
-                .number {
-                    color: #fffabe;
+                .title {
+                    font-size: 28px;
+                    margin-top: 3px;
+                    font-weight: 400;
                 }
             }
 
-            .piece {
-                width: 15px;
-                height: 15px;
-                background-color: #ff6408;
-                margin-top: -9px;
-                transform: rotate(135deg);
-                margin-right: 15%;
-                border-radius: 4px;
+            .popup-group {
+                visibility: hidden;
+                margin-left: -90px;
+                margin-top: -115px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                .popup {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: #ff6408;
+                    padding: 6px 13px;
+                    border-radius: 5px;
+
+                    .heart {
+                        margin-right: 5px;
+                        color: #fffabe;
+                    }
+
+                    .number {
+                        color: #fffabe;
+                    }
+                }
+
+                .piece {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #ff6408;
+                    margin-top: -9px;
+                    transform: rotate(135deg);
+                    margin-right: 15%;
+                    border-radius: 4px;
+                }
             }
         }
+    }
+}
+
+@keyframes bounce-in-right {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+
+    60% {
+        transform: translateY(5px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes gelatine {
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.7, 1.3);
+    }
+
+    50% {
+        transform: scale(1.3, 0.7);
+    }
+
+    75% {
+        transform: scale(0.75, 1.25);
     }
 }
