@@ -1,0 +1,62 @@
+html {
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif !important;
+  background-color: #feb228 !important;
+}
+html body .like {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #ffd758;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #feb228 !important;
+  color: #ffd758;
+}
+html body .like .heart {
+  margin-right: 12px;
+  font-size: 32px;
+}
+html body .like .title {
+  font-size: 28px;
+  margin-top: 3px;
+  font-weight: 400;
+}
+html body .popup-group {
+  margin-left: -90px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transition: margin-top 0.1s;
+}
+html body .popup-group .popup {
+  display: flex;
+  flex-direction: row;
+  background-color: #ff6408;
+  padding: 6px 13px;
+  border-radius: 5px;
+}
+html body .popup-group .popup .heart {
+  margin-right: 5px;
+  color: #fffabe;
+}
+html body .popup-group .popup .number {
+  color: #fffabe;
+}
+html body .popup-group .piece {
+  width: 15px;
+  height: 15px;
+  background-color: #ff6408;
+  margin-top: -9px;
+  transform: rotate(135deg);
+  margin-right: 15%;
+  border-radius: 4px;
+}/*# sourceMappingURL=style.css.map */
