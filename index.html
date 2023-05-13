@@ -13,20 +13,22 @@
 </head>
 
 <body>
-    <div id="like" class="like">
-        <div class="heart">
-            <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="title">Like</div>
-    </div>
-    <div class="popup-group">
-        <div class="popup">
+    <div class="like-area">
+        <div id="like" class="like">
             <div class="heart">
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-regular fa-heart"></i>
             </div>
-            <div class="number">2.3M</div>
+            <div class="title">Like</div>
         </div>
-        <div class="piece"></div>
+        <div class="popup-group">
+            <div class="popup">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="number">2.3M</div>
+            </div>
+            <div class="piece"></div>
+        </div>
     </div>
 
     <script>
@@ -41,23 +43,10 @@
                     heart.classList.add("fa-solid");
                     likeEl.style.color = "#fffabe";
                     likeEl.style.border = "2px solid #fffabe";
-                    popupGroup.style.marginTop = "-160px";
-                    setTimeout(() => {
-                        popupGroup.style.marginTop = "-110px";
-                    }, 100);
-                    setTimeout(() => {
-                        popupGroup.style.marginTop = "-150px";
-                    }, 200);
-                    setTimeout(() => {
-                        popupGroup.style.marginTop = "-120px";
-                    }, 300);
-                    setTimeout(() => {
-                        popupGroup.style.marginTop = "-140px";
-                    }, 400);
-                    setTimeout(() => {
-                        popupGroup.style.marginTop = "-130px";
-                        like = true;
-                    }, 500);
+                    popupGroup.style.visibility = "visible";
+                    popupGroup.style.animation = "bounce-in-right 1.5s ease";
+                    heart.style.animation = "gelatine 0.5s";
+                    like = true;
                     break;
 
                 case true:
@@ -65,10 +54,16 @@
                     heart.classList.remove("fa-solid");
                     likeEl.style.color = "#ffd758";
                     likeEl.style.border = "2px solid #ffdb69";
-                    popupGroup.style.marginTop = "0px";
+                    popupGroup.style.removeProperty("animation");
+                    popupGroup.style.visibility = "hidden";
+                    heart.style.animation = "gelatine 0.5s";
                     like = false;
-                    breeak;
+                    break;
             }
+
+            setTimeout(() => {
+                heart.style.removeProperty("animation");
+            }, 500);
         });
     </script>
 </body>
